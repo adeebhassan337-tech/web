@@ -1,0 +1,339 @@
+/* =====================================================
+   ARVOELECT - GLOBAL VARIABLES
+   Easy to update brand system from here only
+===================================================== */
+
+:root {
+    /* Brand Colors */
+    --primary-blue: #0A1F44;
+    --secondary-blue: #123A6F;
+    --accent-yellow: #FFC107;
+    --charcoal: #1E1E1E;
+    --light-bg: #F4F6F8;
+    --white: #FFFFFF;
+
+    /* Typography */
+    --font-family: 'Inter', 'Poppins', 'Montserrat', sans-serif;
+
+    /* Layout */
+    --container-width: 1200px;
+    --section-padding: 80px 0;
+
+    /* Transition */
+    --transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--light-bg);
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   GLOBAL UTILITIES
+===================================================== */
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: auto;
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   BUTTON SYSTEM
+===================================================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-yellow);
+    color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+    background-color: #e6ac00;
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo h2 {
+    color: var(--primary-blue);
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-list a:hover {
+    color: var(--primary-blue);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   APPROACH SECTION
+===================================================== */
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.highlight-box {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    text-align: center;
+    border-left: 5px solid var(--accent-yellow);
+}
+
+
+/* =====================================================
+   COURSES
+===================================================== */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.course-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.section-cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   CTA SECTION
+===================================================== */
+
+.cta {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    color: var(--white);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: var(--accent-yellow);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .nav {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: var(--white);
+        width: 100%;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
